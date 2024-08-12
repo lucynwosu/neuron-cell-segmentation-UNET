@@ -27,9 +27,6 @@ The LIVECell dataset was created to address the need for annotated data in label
 
 Data is available at: https://github.com/sartorius-research/LIVECell?tab=readme-ov-file  
 
-**Sample data:** 
-![Alt text](images/sample-data.PNG) 
-
  
 ## Model Architecture 
 
