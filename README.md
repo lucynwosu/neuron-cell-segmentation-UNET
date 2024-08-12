@@ -27,7 +27,8 @@ The LIVECell dataset was created to address the need for annotated data in label
 
 Data is available at: https://github.com/sartorius-research/LIVECell?tab=readme-ov-file  
 
-**Sample data:** ![Alt text](images/sample-data.PNG) 
+**Sample data:** 
+![Alt text](images/sample-data.PNG) 
 
  
 ## Model Architecture 
@@ -66,7 +67,7 @@ The trained model is deployed as a web service using a local Docker container. T
 
  **1. Using a streamlit endpoint (Feel free to try)**: copy to web browser https://neuron-cell-segmentation-unet.streamlit.app  
 
-**2. Using the Docker Image**:  
+**2. Using the Docker Image**:  run the line of code below to pull the docker image.
 
 -docker pull lucynwosu123/neuron-cell-unet-segmentation:latest 
 
