@@ -1,9 +1,9 @@
-# neuron-cell-segmentation-UNET
+# cell-segmentation-UNET
 Segmentation masks on neuron cell images using UNET
 
 ## Table of Contents 
 
-- [neuron-cell-segmentation-UNET](#neuron-cell-segmentation-unet)
+- [cell-segmentation-UNET](#cell-segmentation-unet)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Dataset](#dataset)
@@ -35,7 +35,7 @@ For this project, a U-Net model was selected due to its proven effectiveness in 
 
 ## Training Process 
 
-The training process for the segmentation model involves several critical steps, utilizing a U-Net architecture with a ResNet34 encoder pre-trained on ImageNet. The dataset, derived from the LIVECell dataset, includes cell images and corresponding annotations in run-length encoding (RLE) format, which are decoded into binary masks stored as NumPy arrays. 250 data samples were selected and split into training (200) and validation sets (50), with images and masks resized to 256x256 pixels, normalized, and converted into PyTorch tensors using albumentations for augmentation. The U-Net model, designed to take 3-channel RGB images as input and output a single-channel mask, is trained over 200 epochs. The training loop involves calculating Dice loss, which is effective for handling class imbalance, and optimizing the model using the Adam optimizer with a learning rate of 0.01. During each epoch, the model's performance is evaluated on the validation set using Intersection over Union (IoU) and accuracy metrics. Visualizations of the model's predictions alongside the original images and ground truth masks are used for qualitative assessment. 
+The training process for the segmentation model involves several critical steps, utilizing a U-Net architecture with a ResNet34 encoder pre-trained on ImageNet. The dataset, derived from the LIVECell dataset, includes cell images and corresponding annotations in run-length encoding (RLE) format, which are decoded into binary masks stored as NumPy arrays. 250 data samples were selected and split into training (200) and validation sets (50), with images and masks resized to 256x256 pixels, normalized, and converted into PyTorch tensors using albumentations for augmentation. The U-Net model, designed to take 3-channel RGB images as input and output a single-channel mask, is trained over 40 epochs. The training loop involves calculating Dice loss, which is effective for handling class imbalance, and optimizing the model using the Adam optimizer with a learning rate of 0.01. During each epoch, the model's performance is evaluated on the validation set using Intersection over Union (IoU) and accuracy metrics. Visualizations of the model's predictions alongside the original images and ground truth masks are used for qualitative assessment. 
 
 
 ## Evaluation 
